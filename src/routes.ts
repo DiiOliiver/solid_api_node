@@ -8,7 +8,7 @@ router.post('/users', (request, response) => {
     return createUserController.handle(request, response)
 })
 
-router.get('/users/:email', (request, response) => {
+router.get('/users', (request, response) => {
     return findByEmailController.handle(request, response)
 })
 

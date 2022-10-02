@@ -8,11 +8,11 @@ export class FindByEmailController {
     ) {}
 
     async handle(request: Request, response: Response): Promise<Response> {
-        const { email } = request.params
+        const { email } = request.query
 
         try {
             const data: IFindByEmailRequestDTO = {
-                email: email
+                email: String(email)
             }
             
             const user = await this.findByEmailUseCase.execute(data)
