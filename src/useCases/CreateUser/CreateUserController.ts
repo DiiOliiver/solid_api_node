@@ -19,7 +19,9 @@ export class CreateUserController {
             
             await this.createUserUseCase.execute(user)
 
-            return response.status(201).send()
+            return response.status(201).send({
+                message: `Registered user, an email will be sent to ${email}`
+            })
         } catch(err) {
             return response.status(400).json({
                 message: err.message || 'Unexpected error.'

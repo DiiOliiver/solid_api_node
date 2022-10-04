@@ -1,6 +1,6 @@
 import { Router } from 'express'
-import { createUserController } from './useCases/CreateUser'
-import { findByEmailController } from './useCases/FindByEmail'
+import { createUserController } from '../useCases/CreateUser'
+import { findByEmailController } from '../useCases/FindByEmail'
 
 const router = Router()
 
